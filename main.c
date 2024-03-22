@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "calc.h"
 
-float main ()
+int main ()
 {   
+    void (*operation)(float x, float y);
     int opt;
 
     float x, y;
@@ -20,25 +22,29 @@ float main ()
             case 1:
             {
                 read(&x, &y);
-                summ(x, y);
+                operation = summ;
+                operation(x, y);
                 break;
             }
             case 2:
             {
                 read(&x, &y);
-                substr(x, y);
+                operation = substr;
+                operation(x, y);
                 break;
             }
             case 3:
             {
                 read(&x, &y);
-                multipli(x,y);
+                operation = multipli;
+                operation(x, y);
                 break;
             }
             case 4:
             {
                 read(&x, &y);
-                division(x, y);
+                operation = division;
+                operation(x, y);
                 break;
             }
             case 5:
