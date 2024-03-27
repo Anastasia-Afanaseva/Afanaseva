@@ -9,4 +9,7 @@ typedef struct society
     char facebook[128];
 } society_t;
 
+void add_society(society_t *society);
+void show_society(society_t *society);
+
 #endif

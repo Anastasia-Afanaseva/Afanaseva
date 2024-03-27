@@ -7,4 +7,8 @@ typedef struct person
     char lastname[20];
 } person_t;
 
+int check_person(person_t *person);
+int add_person(person_t *person);
+void show_person(person_t *person);
+
 #endif

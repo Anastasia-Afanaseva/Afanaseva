@@ -3,8 +3,6 @@
 #include <stdlib.h>
 #include "info_all.h"
 
-info_all_t info[10] = {0};
-
 int main()
 { 
     int opt;
@@ -28,17 +26,17 @@ int main()
             }
             case 2:
             {
-                del(info);
+                del();
                 break;
             }
             case 3:
             {
-                change(info);
+                change();
                 break;
             }
             case 4:
             {
-                show(info);
+                show();
                 break;
             }
             case 5:

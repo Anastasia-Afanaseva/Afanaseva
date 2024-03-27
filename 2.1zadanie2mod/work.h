@@ -7,5 +7,7 @@ typedef struct work
     char title[30];
 } work_t;
 
+void add_work(work_t *work);
+void show_work(work_t *work);
 
 #endif

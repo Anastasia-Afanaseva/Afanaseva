@@ -7,4 +7,7 @@ typedef struct cont
     char mail[5][30];
 } cont_t;
 
+void add_cont(cont_t *cont);
+void show_cont(cont_t *cont);
+
 #endif
