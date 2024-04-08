@@ -27,22 +27,9 @@ int add_person(person_t *person)
     person->lastname[size] = 0;
     return 0;
 }
-
-int compare_person(person_t *person, person_t *person_1)
-{
-    if (((strncmp(person->firstname, person_1->firstname, 20)) == 0) &&
-    ((strncmp(person->lastname, person_1->lastname, 20)) == 0))
-        return -1;
-    else if (((strncmp(person->firstname, person_1->firstname, 20)) < 0) ||
-        ((strncmp(person->firstname, person_1->firstname, 20)) == 0) &&
-        (((strncmp(person->lastname, person_1->lastname, 20)) < 0)))
-        return 1;
-    return 0;
-}
-
 void show_person(person_t *person)
 {
-    printf("%s", person->firstname);
+    printf("\t%s", person->firstname);
     printf(" %s", person->lastname);
 }
 

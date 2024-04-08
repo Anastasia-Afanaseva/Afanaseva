@@ -30,12 +30,9 @@ int add_person(person_t *person)
 
 int compare_person(person_t *person, person_t *person_1)
 {
-    if (((strncmp(person->firstname, person_1->firstname, 20)) == 0) &&
-    ((strncmp(person->lastname, person_1->lastname, 20)) == 0))
-        return -1;
-    else if (((strncmp(person->firstname, person_1->firstname, 20)) < 0) ||
-        ((strncmp(person->firstname, person_1->firstname, 20)) == 0) &&
-        (((strncmp(person->lastname, person_1->lastname, 20)) < 0)))
+    if (((strncmp(person->firstname, person_1->firstname, 20)) < 0) ||
+        (((strncmp(person->firstname, person_1->firstname, 20)) == 0) &&
+        (((strncmp(person->lastname, person_1->lastname, 20)) < 0))))
         return 1;
     return 0;
 }

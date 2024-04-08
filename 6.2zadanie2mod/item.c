@@ -34,12 +34,7 @@ struct Item* add(struct Item* head)
 
     do
         {
-        if (compare_person(&new_item->info_all.person, &tmp->info_all.person) < 0)
-        {
-            printf("\n\tТакой контакт уже есть в списке");
-            return head;
-        }
-        else if (compare_person(&new_item->info_all.person, &tmp->info_all.person) > 0)
+        if (compare_person(&new_item->info_all.person, &tmp->info_all.person) > 0)
         {
             new_item->next = tmp;
             new_item->prev = tmp->prev;
@@ -170,6 +165,7 @@ struct Item* change(struct Item* head)
         tmp = tmp->next;
         k++;
     }while (tmp != head);
+    return head;
 }
 
 void show(struct Item* head)

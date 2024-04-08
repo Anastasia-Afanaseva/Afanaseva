@@ -25,4 +25,4 @@ item.o: item.c
 	gcc -c -Wall item.c -std=c99 
 
 clean:
-	rm -rf *.o *.a program
+	rm -rf *.o program
